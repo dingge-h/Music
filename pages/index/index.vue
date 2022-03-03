@@ -8,17 +8,19 @@
                     <input type="text" value="" placeholder="搜索歌曲" />
                 </view>
                 <view class="index-list">
-                    <view class="index-list-item">
-                    	<view class="index-list-img">
-                    		<image src="/static/wangyiyunyinyue.png" mode=""></image>
-                    		<text>测试文字</text>
-                    	</view>
-                    	<view class="index-list-text">
-                    		<view>1.与我无关 - 啊冗</view>
-                    		<view>1.与我无关 - 啊冗</view>
-                    		<view>1.与我无关 - 啊冗</view>
-                    	</view>
-                    </view>
+                    <block v-for="(item,index) in topList" :key = "index">
+                        <view class="index-list-item">
+                            <view class="index-list-img">
+                                <image :src="item.coverImgUrl" mode=""></image>
+                                <text>{{ item.updateFrequency }}</text>
+                            </view>
+                            <view class="index-list-text">
+                                <block v-for="(musicItem , index) in item.tracks" :key="index">
+                                    <view>{{ index + 1 }}.{{musicItem.first}} - {{musicItem.second}}</view>
+                                </block>
+                            </view>
+                        </view>
+                    </block>
                 </view>
             </scroll-view>
         </view>
@@ -33,7 +35,7 @@
         components: {musichead},
         data() {
             return {
-
+                topList:[]
             }
         },
         methods: {
@@ -43,7 +45,11 @@
         onLoad() {
             topList()
             .then(res=>{
-                console.log(res)
+                if(res.length){
+                	setTimeout(()=>{
+                		this.topList = res;
+                	},2000);
+                }
             })
             .catch(err=>{
                 console.log(err)
