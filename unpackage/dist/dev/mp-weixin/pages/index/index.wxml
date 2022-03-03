@@ -1,1 +1,1 @@
-<view><text class="iconfont iconlike"></text></view>
+<view><musichead vue-id="8dd740cc-1" bind:__l="__l"></musichead></view>
