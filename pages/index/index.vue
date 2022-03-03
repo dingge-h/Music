@@ -1,6 +1,6 @@
 <template>
 	<view>
-		222
+		333
 	</view>
 </template>
 
@@ -11,12 +11,9 @@
 				
 			}
 		},
-		onLoad() {
-
-		},
-		methods: {
-
-		}
+		methods:{
+            
+        },
 	}
 </script>
 
