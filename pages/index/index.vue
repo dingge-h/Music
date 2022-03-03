@@ -28,6 +28,7 @@
 <script>
     import '@/common/iconfont.css'
     import musichead from '../../components/musichead.vue'
+    import {topList} from '../../common/api.js'
     export default {
         components: {musichead},
         data() {
@@ -36,8 +37,18 @@
             }
         },
         methods: {
-
+            
         },
+        
+        onLoad() {
+            topList()
+            .then(res=>{
+                console.log(res)
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+        }
     }
 </script>
 

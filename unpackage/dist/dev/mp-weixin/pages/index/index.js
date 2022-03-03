@@ -164,7 +164,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-__webpack_require__(/*! @/common/iconfont.css */ 18); //
+__webpack_require__(/*! @/common/iconfont.css */ 18);
+
+var _api = __webpack_require__(/*! ../../common/api.js */ 32); //
 //
 //
 //
@@ -191,7 +193,7 @@ __webpack_require__(/*! @/common/iconfont.css */ 18); //
 //
 //
 //
-var musichead = function musichead() {__webpack_require__.e(/*! require.ensure | components/musichead */ "components/musichead").then((function () {return resolve(__webpack_require__(/*! ../../components/musichead.vue */ 21));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { musichead: musichead }, data: function data() {return {};}, methods: {} };exports.default = _default;
+var musichead = function musichead() {__webpack_require__.e(/*! require.ensure | components/musichead */ "components/musichead").then((function () {return resolve(__webpack_require__(/*! ../../components/musichead.vue */ 21));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { components: { musichead: musichead }, data: function data() {return {};}, methods: {}, onLoad: function onLoad() {(0, _api.topList)().then(function (res) {console.log(res);}).catch(function (err) {console.log(err);});} };exports.default = _default;
 
 /***/ }),
 /* 18 */,
