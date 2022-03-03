@@ -5,7 +5,13 @@
 			"style": {
 				"navigationStyle" : "custom"
 			}
-		}
+		},
+        {
+            "path" : "pages/list/list",
+            "style" : {
+        		"navigationStyle" : "custom"
+        	}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
