@@ -9,7 +9,7 @@
                 </view>
                 <view class="index-list">
                     <block v-for="(item,index) in topList" :key = "index">
-                        <view class="index-list-item">
+                        <view class="index-list-item" @click="handleToList(item.listId)">
                             <view class="index-list-img">
                                 <image :src="item.coverImgUrl" mode=""></image>
                                 <text>{{ item.updateFrequency }}</text>
@@ -39,7 +39,11 @@
             }
         },
         methods: {
-            
+            handleToList(listId){
+            	uni.navigateTo({
+            		url: '/pages/list/list?listId=' + listId
+            	});
+            },
         },
         
         onLoad() {
