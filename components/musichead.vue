@@ -1,6 +1,6 @@
 <template>
     <view class="music-head">
-        <view class="music-head-icon">
+        <view class="music-head-icon" v-if="icon">
             <text class="iconfont iconzuojiantou-copy" @click="handleToBack()"></text> |
             <text class="iconfont iconshouye" @click="handleToHome()"></text>
         </view>
@@ -10,7 +10,7 @@
 
 <script>
     export default {
-        props: ['title'],
+        props: ['title','icon'],
         data() {
             return {
 
