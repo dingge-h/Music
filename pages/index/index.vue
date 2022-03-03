@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<musichead></musichead>
+		<musichead title = "网易云音乐"></musichead>
 	</view>
 </template>
 

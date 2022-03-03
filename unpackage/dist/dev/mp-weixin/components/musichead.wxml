@@ -1,1 +1,1 @@
-<view>自定义顶部</view>
+<view class="music-head data-v-c23f074c"><view class="music-head-icon data-v-c23f074c"><text class="iconfont iconzuojiantou-copy data-v-c23f074c"></text>|<text class="iconfont iconshouye data-v-c23f074c"></text></view>{{''+title+''}}</view>
