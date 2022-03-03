@@ -1,8 +1,8 @@
 <template>
     <view class="music-head">
         <view class="music-head-icon">
-            <text class="iconfont iconzuojiantou-copy"></text> |
-            <text class="iconfont iconshouye"></text>
+            <text class="iconfont iconzuojiantou-copy" @click="handleToBack()"></text> |
+            <text class="iconfont iconshouye" @click="handleToHome()"></text>
         </view>
         {{title}}
     </view>
@@ -16,6 +16,20 @@
 
             }
         },
+        
+        methods:{
+            // 返回上一页
+            handleToBack(){
+                uni.navigateBack()
+            },
+            
+            // 返回首页
+            handleToHome(){
+                uni.navigateTo({
+                    url:'/pages/index/index'
+                })
+            }
+        }
     }
 </script>
 
