@@ -134,19 +134,20 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-var _default =
-{
-  data: function data() {
-    return {};
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
-  },
+
+
+
+
+__webpack_require__(/*! @/common/iconfont.css */ 19); //
+//
+//
+//
+//
+//
+var _default = { data: function data() {return {};},
   methods: {} };exports.default = _default;
 
 /***/ })
